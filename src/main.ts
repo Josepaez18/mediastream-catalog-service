@@ -8,6 +8,9 @@ import { allowedCorsOrigins } from './public-urls';
 import { RequestIdMiddleware } from './common/request-id.middleware';
 import { AllExceptionsFilter } from './common/all-exceptions.filter';
 
+// Error de lint a propósito (rama demo/falla-lint): variable declarada y sin usar.
+const variableSinUsar = 'demo';
+
 async function bootstrap() {
   const app = await NestFactory.create<NestExpressApplication>(AppModule, {
     logger: ['log', 'error', 'warn', 'debug'],
